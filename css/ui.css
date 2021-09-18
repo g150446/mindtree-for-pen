@@ -90,10 +90,10 @@ button:not(:disabled) {
 
 }
 	
-.ui button[data-command=Notes] {
+#copyhelp {
 	position: absolute;
-	left: -90px;
-	top: 5px;
+	left: - 50px;
+	top: 50px;
 }
 
 .ui table {

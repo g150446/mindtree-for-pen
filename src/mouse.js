@@ -27,7 +27,7 @@ MM.Mouse.handleEvent = function(e) {
 			var item = MM.App.map.getItemFor(e.target);
 			if (MM.App.editing && item == MM.App.current) { return; } /* ignore on edited node */
 			if (item) { MM.App.select(item); }
-console.log("my test");
+
 
 		break;
 
@@ -70,6 +70,7 @@ console.log("my test");
 		break;
 
 		case "touchmove":
+			console.log("my test");
 			if (e.touches.length > 1) { return; }
 			e.clientX = e.touches[0].clientX;
 			e.clientY = e.touches[0].clientY;

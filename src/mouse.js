@@ -27,7 +27,7 @@ MM.Mouse.handleEvent = function(e) {
 			var item = MM.App.map.getItemFor(e.target);
 			if (MM.App.editing && item == MM.App.current) { return; } /* ignore on edited node */
 			if (item) { MM.App.select(item); }
-alert("my test");
+console.log("my test");
 
 		break;
 

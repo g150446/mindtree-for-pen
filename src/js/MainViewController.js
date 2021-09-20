@@ -156,10 +156,10 @@ mindmaps.MainViewController = function(eventBus, mindmapModel, commandRegistry) 
         mindmapModel, inspectorView);
     inspectorPresenter.go();
 
-    var inspectorPanel = fpf
-        .create("Inspector", inspectorView.getContent());
-    inspectorPanel.show();
-    statusbarPresenter.addEntry(inspectorPanel);
+   // var inspectorPanel = fpf
+      //  .create("Inspector", inspectorView.getContent());
+//    inspectorPanel.show();
+ //   statusbarPresenter.addEntry(inspectorPanel);
 
     // navigator
     var naviView = new mindmaps.NavigatorView();

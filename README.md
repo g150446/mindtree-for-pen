@@ -1,32 +1,46 @@
-# My Mind
+# PSA: This project is not actively maintained. I consider it feature complete for what it set out to do. I'll fix critical bugs should they pop up but I won't be adding new features.
 
-![Screenshot](screenshot.png)
 
-My Mind is a web application for creating and managing Mind maps. It is free to use and you can fork its source code. It is distributed under the terms of the MIT license.
+# mindmaps
+mindmaps is a HTML5 based mind mapping application. It lets you create neat looking mind maps in the browser.
 
-New to Mind maps? They are useful, aesthetic and cool! Read more about these special diagrams in [the Wikipedia article](http://en.wikipedia.org/wiki/Mind_map).
+This project started in 2011 as an exploration into what's possible to do in browsers using modern APIs. Nowadays, most of this stuff is pretty common and the code base is a bit outdated. This was way before React, ES6, webpack. Heck, it doesn't even use Backbone.
 
-* [Official web page](http://my-mind.github.io/)
-* [Sample mind map](http://my-mind.github.io/?map=examples/features.mymind) showcasing many features
-* [News / Changelog](https://github.com/ondras/my-mind/wiki/News)
-* [Documentation](https://github.com/ondras/my-mind/wiki)
-* <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=3340079"><img src="https://www.paypal.com/en_GB/i/btn/btn_donate_LG.gif" alt="Donate" title="Donate to support further development" /></a>
+However, there is no reason to change any of that and it makes the code base quite easy to grok. There is no compilation step, no babel plugins, no frameworks. Just a JavaScript application and a very simple Model-View-Presenter pattern.
 
-## Installation
-Note: there is also an online version, which can be found at [my-mind.github.io](http://my-mind.github.io/)
+## HTML5 stuff which was cool in 2011
+- 100% offline capable via ApplicationCache
+- Stores mind maps in LocalStorage
+- FileReader API reads stored mind maps from the hard drive
+- Canvas API draws the mind map
 
-* Download the zip by clicking [here](archive/master.zip) and extract the archive, or clone the repository using git
-* Open index.html in your webbrowser
-* Done! If need be, you can find the manual [here](https://github.com/ondras/my-mind/wiki)
+## Try it out
+The latest stable build is hosted [here](https://www.mindmaps.app).
 
-## Contributing
+## Build
+* First run `npm install` to install required dependencies
+* Run `npm run start` to launch a local dev server. The app will be hosted at [http://localhost:3000](http://localhost:3000).
+* Run `npm run build` to compile the production bundle. The artifacts will be located in `/dist`.
 
-Do you want to participate?
 
-* Found a bug? [Open an issue.](https://github.com/ondras/my-mind/issues)
-* Not sure how to do stuff? [Check the docs.](https://github.com/ondras/my-mind/wiki)
-* Have a feature request? [Open an issue.](https://github.com/ondras/my-mind/issues)
-* Have an improvement? [Submit a pull request.](https://github.com/ondras/my-mind/pulls)
+## Host yourself
+All you need is a web server for static files. After building, copy all files from /dist into your web directory and launch the app with index.html.
+Make sure your web server serves .appcache files with the mime type `text/cache-manifest` for the application to
+be accessible offline.
+
+In Apache add the following line to your .htaccess:
+
+```
+AddType text/cache-manifest .appcache
+```
+
+In nginx add this to conf/mime.types:
+
+```
+text/cache-manifest appcache; 
+```
+
+Alternatively, you can launch a local debug server with `npm start` which starts a server on localhost:8080.
 
 ## License
-[MIT](LICENSE.txt)
+mindmaps is licensed under AGPL V3, see LICENSE for more information.

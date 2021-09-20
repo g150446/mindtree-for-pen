@@ -783,6 +783,7 @@ mindmaps.DefaultCanvasView = function() {
         });
 
     function commitText() {
+      console.log("commit text");
       if (attached && self.commit) {
         self.commit(self.node, $editor.val());
       }

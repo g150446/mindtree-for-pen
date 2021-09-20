@@ -156,10 +156,10 @@ mindmaps.MainViewController = function(eventBus, mindmapModel, commandRegistry) 
         mindmapModel, inspectorView);
     inspectorPresenter.go();
 
-   // var inspectorPanel = fpf
-      //  .create("Inspector", inspectorView.getContent());
-//    inspectorPanel.show();
- //   statusbarPresenter.addEntry(inspectorPanel);
+   var inspectorPanel = fpf
+        .create("Inspector", inspectorView.getContent());
+    inspectorPanel.show();
+    statusbarPresenter.addEntry(inspectorPanel);
 
     // navigator
     var naviView = new mindmaps.NavigatorView();
@@ -169,6 +169,8 @@ mindmaps.MainViewController = function(eventBus, mindmapModel, commandRegistry) 
 
     var navigatorPanel = fpf.create("Navigator", naviView.getContent());
     navigatorPanel.show();
+    console.log("hide panel");
+    navigatorPanel.hide();
     statusbarPresenter.addEntry(navigatorPanel);
   };
 };

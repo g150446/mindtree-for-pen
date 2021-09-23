@@ -167,10 +167,11 @@ mindmaps.MainViewController = function(eventBus, mindmapModel, commandRegistry) 
         canvasContainer, zoomController);
     naviPresenter.go();
 
-    var navigatorPanel = fpf.create("Navigator", naviView.getContent());
-    navigatorPanel.show();
-    console.log("hide panel");
-    navigatorPanel.hide();
-    statusbarPresenter.addEntry(navigatorPanel);
+    console.log("no show panel");
+   // var navigatorPanel = fpf.create("Navigator", naviView.getContent());
+  //  navigatorPanel.show();
+    
+    
+  //  statusbarPresenter.addEntry(navigatorPanel);
   };
 };

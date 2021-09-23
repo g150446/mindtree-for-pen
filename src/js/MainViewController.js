@@ -162,10 +162,10 @@ mindmaps.MainViewController = function(eventBus, mindmapModel, commandRegistry) 
     statusbarPresenter.addEntry(inspectorPanel);
 
     // navigator
-    var naviView = new mindmaps.NavigatorView();
-    var naviPresenter = new mindmaps.NavigatorPresenter(eventBus, naviView,
-        canvasContainer, zoomController);
-    naviPresenter.go();
+  //  var naviView = new mindmaps.NavigatorView();
+//    var naviPresenter = new mindmaps.NavigatorPresenter(eventBus, naviView,
+   //     canvasContainer, zoomController);
+  //  naviPresenter.go();
 
     console.log("no show panel");
    // var navigatorPanel = fpf.create("Navigator", naviView.getContent());

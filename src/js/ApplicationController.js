@@ -11,7 +11,7 @@ mindmaps.ApplicationController = function() {
   var mindmapModel = new mindmaps.MindMapModel(eventBus, commandRegistry, undoController);
   var clipboardController = new mindmaps.ClipboardController(eventBus,
       commandRegistry, mindmapModel);
-  var helpController = new mindmaps.HelpController(eventBus, commandRegistry);
+ // var helpController = new mindmaps.HelpController(eventBus, commandRegistry);
   var printController = new mindmaps.PrintController(eventBus,
       commandRegistry, mindmapModel);
   var autosaveController = new mindmaps.AutoSaveController(eventBus, mindmapModel);

@@ -40,7 +40,7 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
           {
             position : "bottomMiddle",
             maxWidth : 550,
-            title : "Welcome to mindmaps",
+            title : "No Welcome to mindmaps",
             content : "Hello there, it seems like you are new here! These bubbles "
                 + "will guide you through the app. Or they won't if you want to skip this tutorial and <a class='skip-tutorial link'>click here<a/>."
           });

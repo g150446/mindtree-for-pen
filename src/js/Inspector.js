@@ -249,7 +249,7 @@ mindmaps.InspectorPresenter = function(eventBus, mindmapModel, view) {
     
     var nextaction = new mindmaps.action.DeleteNodeAction( mindmapModel.selectedNode,
                                                     mindmapModel.getMindMap() );
-    mindmapModel.executeAction(newaction);
+    mindmapModel.executeAction(nextaction);
   };
 
   view.branchColorPicked = function(color) {

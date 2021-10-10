@@ -246,6 +246,10 @@ mindmaps.InspectorPresenter = function(eventBus, mindmapModel, view) {
     var action = new mindmaps.action.SetFontDecorationAction(
         mindmapModel.selectedNode, checked ? "line-through" : "none");
     mindmapModel.executeAction(action);
+    
+    var nextaction = new mindmaps.action.DeleteNodeAction( mindmapModel.selectedNode,
+                                                    mindmapModel.getMindMap() );
+    mindmapModel.executeAction(newaction);
   };
 
   view.branchColorPicked = function(color) {

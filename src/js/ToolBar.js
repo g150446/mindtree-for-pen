@@ -290,7 +290,7 @@ mindmaps.ToolBarPresenter = function(eventBus, commandRegistry, view,
   view.addMenu(fileMenu);
 
   // help button
-  view.addButton(commandToButton(mindmaps.HelpCommand), view.alignRight);
+  view.addButton(commandToButton(mindmaps.DeleteNodeCommand), view.alignRight);
 
   this.go = function() {
     view.init();

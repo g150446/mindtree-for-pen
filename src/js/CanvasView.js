@@ -73,9 +73,9 @@ mindmaps.CanvasView = function() {
     // console.log(sl, st);
 
     var drawingArea = this.$getDrawingArea();
-    var width = drawingArea.width();
-    var height = drawingArea.height();
-    drawingArea.width(width * delta  * 10).height(height * delta  *10);
+    var width = drawingArea.width() * 10;
+    var height = drawingArea.height() * 10;
+    drawingArea.width(width * delta  ).height(height * delta  );
 //drawingArea.width(width * delta).height(height * delta);
     // scroll only after drawing area's width was set.
     this.scroll(sl, st);
@@ -86,7 +86,7 @@ mindmaps.CanvasView = function() {
       // parsing could possibly fail in the future.
       console.warn("Could not set background-size!");
     }
-    drawingArea.css("background-size", backgroundSize * delta);
+    drawingArea.css("background-size", backgroundSize * delta  *10);
   };
 
   /**

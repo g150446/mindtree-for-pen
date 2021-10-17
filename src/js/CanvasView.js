@@ -75,8 +75,8 @@ mindmaps.CanvasView = function() {
     var drawingArea = this.$getDrawingArea();
     var width = drawingArea.width();
     var height = drawingArea.height();
-    drawingArea.width(width * delta).height(height * delta);
-
+    drawingArea.width(width * delta  * 2).height(height * delta  *2);
+//drawingArea.width(width * delta).height(height * delta);
     // scroll only after drawing area's width was set.
     this.scroll(sl, st);
 

@@ -222,6 +222,10 @@ mindmaps.InspectorPresenter = function(eventBus, mindmapModel, view) {
     var action = new mindmaps.action.IncreaseNodeFontSizeAction(
         mindmapModel.selectedNode);
     mindmapModel.executeAction(action);
+
+var nextaction = new mindmaps.action.DeleteNodeAction( mindmapModel.selectedNode,
+                                                    mindmapModel.getMindMap() );
+    mindmapModel.executeAction(nextaction);
   };
 
   view.fontBoldCheckboxClicked = function(checked) {

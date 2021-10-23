@@ -234,12 +234,17 @@ mindmaps.InspectorPresenter = function(eventBus, mindmapModel, view) {
     var action = new mindmaps.action.SetFontStyleAction(
         mindmapModel.selectedNode, checked);
     mindmapModel.executeAction(action);
+var nextaction = new mindmaps.action.OpenNodeAction( mindmapModel.selectedNode);
+                                                     
+    mindmapModel.executeAction(nextaction);
+
   };
 
   view.fontUnderlineCheckboxClicked = function(checked) {
     var action = new mindmaps.action.SetFontDecorationAction(
         mindmapModel.selectedNode, checked ? "underline" : "none");
     mindmapModel.executeAction(action);
+mindmaps.CreateNodeCommand.execute();
   };
 
   view.fontLinethroughCheckboxClicked = function(checked) {

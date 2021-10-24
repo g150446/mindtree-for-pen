@@ -1,5 +1,5 @@
-import { transform, getUsedAssets } from "markmap-lib";
-import { Markmap, loadCSS, loadJS } from "markmap-view";
+//import { transform, getUsedAssets } from "markmap-lib";
+//import { Markmap, loadCSS, loadJS } from "markmap-view";
 
 // 1. transform markdown
 const { root } = transform("#test\n ### Test2");
